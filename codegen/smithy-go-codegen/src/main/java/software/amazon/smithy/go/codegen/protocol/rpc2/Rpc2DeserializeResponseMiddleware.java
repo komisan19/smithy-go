@@ -87,7 +87,7 @@ public abstract class Rpc2DeserializeResponseMiddleware extends DeserializeRespo
                 """,
                 MapUtils.of(
                         "copy", GoStdlibTypes.Io.Copy,
-                        "discard", GoStdlibTypes.Io.IoUtil.Discard,
+                        "discard", GoStdlibTypes.Io.io.Discard,
                         "errorf", GoStdlibTypes.Fmt.Errorf,
                         "result", ctx.getSymbolProvider().toSymbol(output)
                 ));

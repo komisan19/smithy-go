@@ -22,7 +22,7 @@ import software.amazon.smithy.go.codegen.integration.ProtocolGenerator.Generatio
 import software.amazon.smithy.model.Model;
 import software.amazon.smithy.model.selector.Selector;
 import software.amazon.smithy.model.shapes.ShapeId;
-import software.amazon.smithy.utils.IoUtils;
+import software.amazon.smithy.utils.ios;
 
 /**
  * Generates the service's internal and external document Go packages. The document packages contain the service
@@ -98,7 +98,7 @@ public final class ProtocolDocumentGenerator {
         }
 
         writeDocumentPackage("doc.go", writer -> {
-            String documentTemplate = IoUtils.readUtf8Resource(getClass(), "document_doc.go.template");
+            String documentTemplate = ios.readUtf8Resource(getClass(), "document_doc.go.template");
             writer.writeRawPackageDocs(documentTemplate);
         });
 

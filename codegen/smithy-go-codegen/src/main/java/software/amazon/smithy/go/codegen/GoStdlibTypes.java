@@ -63,8 +63,8 @@ public final class GoStdlibTypes {
         public static final Symbol ReadAll = SmithyGoDependency.IO.valueSymbol("ReadAll");
         public static final Symbol Copy = SmithyGoDependency.IO.valueSymbol("Copy");
 
-        public static final class IoUtil {
-            public static final Symbol Discard = SmithyGoDependency.IOUTIL.valueSymbol("Discard");
+        public static final class io {
+            public static final Symbol Discard = SmithyGoDependency.io.valueSymbol("Discard");
         }
     }
 

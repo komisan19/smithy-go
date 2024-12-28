@@ -39,7 +39,7 @@ import software.amazon.smithy.protocoltests.traits.HttpRequestTestCase;
 import software.amazon.smithy.protocoltests.traits.HttpRequestTestsTrait;
 import software.amazon.smithy.protocoltests.traits.HttpResponseTestCase;
 import software.amazon.smithy.protocoltests.traits.HttpResponseTestsTrait;
-import software.amazon.smithy.utils.IoUtils;
+import software.amazon.smithy.utils.ios;
 
 /**
  * Generates protocol unit tests for the HTTP protocol from smithy models.
@@ -174,7 +174,7 @@ public class HttpProtocolTestGenerator {
 
         // Include any additional stubs required.
         for (String additionalStub : additionalStubs) {
-            writer.write(IoUtils.readUtf8Resource(getClass(), additionalStub));
+            writer.write(ios.readUtf8Resource(getClass(), additionalStub));
         }
     }
 
